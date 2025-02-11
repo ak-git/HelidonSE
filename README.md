@@ -113,3 +113,15 @@ to stop
 ```shell
 docker compose down
 ```
+
+[![Github Action Badge](https://github.com/ak-git/HelidonSE/actions/workflows/actions.yml/badge.svg)](https://github.com/ak-git/HelidonSE/actions/workflows/actions.yml/badge.svg)
+
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=ak-git_HelidonSE&metric=coverage)](https://sonarcloud.io/summary/new_code?id=ak-git_HelidonSE)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=ak-git_HelidonSE&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=ak-git_HelidonSE)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=ak-git_HelidonSE&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=ak-git_HelidonSE)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=ak-git_HelidonSE&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=ak-git_HelidonSE)
+
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=ak-git_HelidonSE&metric=bugs)](https://sonarcloud.io/summary/new_code?id=ak-git_HelidonSE)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=ak-git_HelidonSE&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=ak-git_HelidonSE)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=ak-git_HelidonSE&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=ak-git_HelidonSE)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=ak-git_HelidonSE&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=ak-git_HelidonSE)
