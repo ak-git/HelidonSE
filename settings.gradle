@@ -17,5 +17,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = 'SimpleApp'
-include 'hello'
+rootProject.name = 'HelidonSE'
+include 'helidon'

@@ -1,5 +1,4 @@
 [versions]
-javamodularity-moduleplugin = '1.8.15'
 sonarqube = '6.0.1.5171'
 jacocolog = '3.1.0'
 spotbugs = '6.1.4'
@@ -9,14 +8,8 @@ jgitver = '0.10.0-rc03'
 johnrengelman-shadow = '8.1.1'
 
 jspecify = '1.0.0'
-junit = '5.11.4'
-assertj = '3.27.3'
-
-slf4j = '2.1.0-alpha1'
-logback = '1.5.16'
 
 [plugins]
-javamodularity-moduleplugin = { id = 'org.javamodularity.moduleplugin', version.ref = 'javamodularity-moduleplugin' }
 sonarqube = { id = 'org.sonarqube', version.ref = 'sonarqube' }
 jacocolog = { id = 'org.barfuin.gradle.jacocolog', version.ref = 'jacocolog' }
 spotbugs = { id = 'com.github.spotbugs', version.ref = 'spotbugs' }
@@ -27,18 +20,3 @@ johnrengelman-shadow = { id = 'com.github.johnrengelman.shadow', version.ref = '
 
 [libraries]
 jspecify = { module = 'org.jspecify:jspecify', version.ref = 'jspecify' }
-
-junit = { module = 'org.junit:junit-bom', version.ref = 'junit' }
-junit-jupiter = { module = 'org.junit.jupiter:junit-jupiter' }
-junit-jupiter-api = { module = 'org.junit.jupiter:junit-jupiter-api' }
-junit-jupiter-engine = { module = 'org.junit.jupiter:junit-jupiter-engine' }
-junit-platform-launcher = { module = 'org.junit.platform:junit-platform-launcher' }
-assertj = { module = 'org.assertj:assertj-core', version.ref = 'assertj' }
-
-slf4j = { module = 'org.slf4j:slf4j-api', version.ref = 'slf4j' }
-logback = { module = 'ch.qos.logback:logback-classic', version.ref = 'logback' }
-
-[bundles]
-test-implementation = ['junit-jupiter-api', 'assertj']
-test-compile = ['junit-jupiter', 'junit-jupiter-engine']
-test-runtime = ['junit-jupiter-engine', 'junit-platform-launcher']

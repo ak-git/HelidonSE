@@ -4,7 +4,7 @@
     <module name="SimpleApp.hello.main" />
     <extension name="coverage">
       <pattern>
-        <option name="PATTERN" value="com.ak.app.*" />
+        <option name="PATTERN" value="com.ak.helidon.*" />
         <option name="ENABLED" value="true" />
       </pattern>
     </extension>

@@ -8,7 +8,7 @@ on:
 
 env:
   DOCKER_USER: a002k
-  DOCKER_IMAGE: simple-app
+  DOCKER_IMAGE: helidon-se
 
 jobs:
   build:

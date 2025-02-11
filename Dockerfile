@@ -9,11 +9,11 @@ RUN groupadd -g 1234 customgroup && \
 USER customuser
 
 # Copy the app files from host machine to image filesystem
-COPY --link hello/build/libs/hello-all.jar /home/customuser/hello-all.jar
+COPY --link helidon/build/libs/helidon-all.jar /home/customuser/helidon-all.jar
 
 # Set the directory for executing future commands
 WORKDIR /home/customuser
 
 # Run the Main class
 # https://docs.docker.com/reference/build-checks/json-args-recommended/
-ENTRYPOINT ["java", "-jar", "/home/customuser/hello-all.jar"]
+ENTRYPOINT ["java", "-jar", "/home/customuser/helidon-all.jar"]

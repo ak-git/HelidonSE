@@ -1,4 +1,34 @@
-# Simple Java "Hello World" Application with Gradle and Docker support
+# Simple HelidonSE "Hello World" Application with Gradle and Docker support
+
+## A simple service to greet you. Examples:
+
+### Get default greeting message:
+
+http://localhost:8080/simple-greet
+
+```shell
+curl -X GET http://localhost:8080/simple-greet
+```
+
+http://localhost:8080/greet
+
+```shell
+curl -X GET http://localhost:8080/greet
+```
+
+### Get greeting message for Joe:
+
+http://localhost:8080/greet/Joe
+
+```shell
+curl -X GET http://localhost:8080/greet/Joe
+```
+
+### Change greeting
+
+```shell
+curl -X PUT -H "Content-Type: application/json" -d 'Howdy' http://localhost:8080/greet/greeting
+```
 
 ## Run using Gradle
 
@@ -21,7 +51,7 @@
 ### Update version and add git tag
 
 ```shell
-git tag 2025.01
+git tag 2025.02
 ```
 
 ## Update dependencies
@@ -43,11 +73,11 @@ git tag 2025.01
 ## Run docker image
 
 ```shell
-docker run --rm a002k/simple-app
+docker run --rm a002k/helidon-se
 ```
 
 ```shell
-docker run -d --name simple-app --rm a002k/simple-app
+docker run -d --name helidon-se --rm a002k/helidon-se
 ```
 
 - ```-i``` Keep STDIN open even if not attached
@@ -57,25 +87,25 @@ docker run -d --name simple-app --rm a002k/simple-app
 and follow ```-f``` logs
 
 ```shell
-docker logs -f simple-app
+docker logs -f helidon-se
 ```
 
 to stop
 
 ```shell
-docker stop simple-app
+docker stop helidon-se
 ```
 
 ## Run docker image as docker-compose
 
 ```shell
-docker compose run -d --name simple-app --rm simple-app
+docker compose run -d --name helidon-se --rm helidon-se
 ```
 
 and follow ```-f``` logs
 
 ```shell
-docker compose logs -f simple-app
+docker compose logs -f helidon-se
 ```
 
 to stop
@@ -83,15 +113,3 @@ to stop
 ```shell
 docker compose down
 ```
-
-[![Github Action Badge](https://github.com/ak-git/SimpleApp/actions/workflows/actions.yml/badge.svg)](https://github.com/ak-git/SimpleApp/actions/workflows/actions.yml/badge.svg)
-
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=ak-git_SimpleApp&metric=coverage)](https://sonarcloud.io/summary/new_code?id=ak-git_SimpleApp)
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=ak-git_SimpleApp&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=ak-git_SimpleApp)
-[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=ak-git_SimpleApp&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=ak-git_SimpleApp)
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=ak-git_SimpleApp&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=ak-git_SimpleApp)
-
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=ak-git_SimpleApp&metric=bugs)](https://sonarcloud.io/summary/new_code?id=ak-git_SimpleApp)
-[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=ak-git_SimpleApp&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=ak-git_SimpleApp)
-[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=ak-git_SimpleApp&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=ak-git_SimpleApp)
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=ak-git_SimpleApp&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=ak-git_SimpleApp)

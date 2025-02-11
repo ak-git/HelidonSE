@@ -1,4 +1,4 @@
 @NullMarked
-package com.ak.app;
+package com.ak.helidon;
 
 import org.jspecify.annotations.NullMarked;
