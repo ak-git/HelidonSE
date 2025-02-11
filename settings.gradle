@@ -1,0 +1,21 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        mavenCentral()
+        maven { url = 'https://jitpack.io' }
+    }
+}
+
+plugins {
+    id('com.autonomousapps.build-health') version '2.8.2'
+}
+
+dependencyResolutionManagement {
+    repositories {
+        mavenCentral()
+        maven { url = 'https://jitpack.io' }
+    }
+}
+
+rootProject.name = 'SimpleApp'
+include 'hello'

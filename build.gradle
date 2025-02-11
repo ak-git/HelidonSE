@@ -1,0 +1,97 @@
+import com.github.spotbugs.snom.Confidence
+
+plugins {
+    id 'java'
+    id 'idea'
+    id 'jacoco'
+    alias(libs.plugins.spotbugs)
+    alias(libs.plugins.ben.manes.versions)
+    alias(libs.plugins.nebula.lint)
+    alias(libs.plugins.sonarqube)
+    alias(libs.plugins.jacocolog)
+    alias(libs.plugins.jgitver)
+}
+
+spotbugs {
+    reportLevel = Confidence.valueOf('HIGH')
+}
+
+tasks.spotbugsMain {
+    reports.create('html') {
+        required = true
+        setStylesheet('fancy-hist.xsl')
+    }
+}
+
+sonar {
+    properties {
+        property 'sonar.projectKey', property('sonar.projectKey')
+        property 'sonar.organization', property('sonar.organization')
+        property 'sonar.host.url', 'https://sonarcloud.io'
+        property 'sonar.branch.name', 'master'
+        property 'sonar.coverage.jacoco.xmlReportPaths', 'build/reports/jacoco/jacocoAggregatedReport/jacocoAggregatedReport.xml'
+    }
+}
+
+allprojects {
+    group = 'com.ak'
+    apply plugin: 'idea'
+    apply plugin: 'jacoco'
+    apply plugin: 'org.barfuin.gradle.jacocolog'
+
+    idea {
+        module {
+            inheritOutputDirs = true
+            downloadJavadoc = true
+            downloadSources = true
+        }
+    }
+
+    sourceSets {
+        main.output.resourcesDir = main.java.classesDirectory
+    }
+
+    jacoco {
+        toolVersion = '0.8.12'
+    }
+
+    jacocoTestReport {
+        reports {
+            xml.required = true
+        }
+    }
+}
+
+subprojects {
+    apply plugin: 'java'
+
+    configurations {
+        compileClasspath {
+            resolutionStrategy.failOnVersionConflict()
+        }
+    }
+
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(23)
+        }
+    }
+
+    compileJava {
+        options.encoding = 'UTF-8'
+        options.compilerArgs << '-parameters'
+    }
+
+    compileTestJava {
+        options.encoding = 'UTF-8'
+    }
+
+    test {
+        forkEvery = 5
+        useJUnitPlatform()
+        testLogging {
+            events 'passed', 'skipped', 'failed'
+        }
+        maxHeapSize = '1G'
+    }
+}
