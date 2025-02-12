@@ -17,3 +17,5 @@ WORKDIR /home/customuser
 # Run the Main class
 # https://docs.docker.com/reference/build-checks/json-args-recommended/
 ENTRYPOINT ["java", "-jar", "/home/customuser/helidon-all.jar"]
+
+EXPOSE 8080
