@@ -9,8 +9,7 @@ import io.helidon.webserver.testing.junit5.SetUpRoute;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
+import static org.assertj.core.api.Assertions.assertThat;
 
 abstract class AbstractMainTest {
   private final Http1Client client;
@@ -35,11 +34,11 @@ abstract class AbstractMainTest {
   void greetGet(String path, String config, String greet) {
     if (!config.isEmpty()) {
       ClientResponseTyped<String> response = client.put("/greet/greeting").submit(config, String.class);
-      assertThat(response.status(), is(Status.NO_CONTENT_204));
+      assertThat(response.status()).isEqualTo(Status.NO_CONTENT_204);
     }
 
     ClientResponseTyped<String> response = client.get(path).request(String.class);
-    assertThat(response.status(), is(Status.OK_200));
-    assertThat(response.entity(), is(greet));
+    assertThat(response.status()).isEqualTo(Status.OK_200);
+    assertThat(response.entity()).isEqualTo(greet);
   }
 }

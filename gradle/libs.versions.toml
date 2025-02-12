@@ -8,6 +8,8 @@ jgitver = '0.10.0-rc03'
 johnrengelman-shadow = '8.1.1'
 
 jspecify = '1.0.0'
+assertj = '3.27.3'
+helidon = '4.1.6'
 
 [plugins]
 sonarqube = { id = 'org.sonarqube', version.ref = 'sonarqube' }
@@ -20,3 +22,5 @@ johnrengelman-shadow = { id = 'com.github.johnrengelman.shadow', version.ref = '
 
 [libraries]
 jspecify = { module = 'org.jspecify:jspecify', version.ref = 'jspecify' }
+assertj = { module = 'org.assertj:assertj-core', version.ref = 'assertj' }
+helidon = { module = 'io.helidon:helidon-dependencies', version.ref = 'helidon'}

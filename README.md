@@ -1,4 +1,4 @@
-# Simple HelidonSE "Hello World" Application with Gradle and Docker support
+# Simple HelidonSE Application with Gradle and Docker support
 
 ## A simple service to greet you. Examples:
 
@@ -27,7 +27,7 @@ curl -X GET http://localhost:8080/greet/Joe
 ### Change greeting
 
 ```shell
-curl -X PUT -H "Content-Type: application/json" -d 'Howdy' http://localhost:8080/greet/greeting
+curl -X PUT -d 'Howdy' http://localhost:8080/greet/greeting
 ```
 
 ## Run using Gradle
