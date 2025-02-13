@@ -2,3 +2,11 @@ services:
   helidon-se:
     container_name: helidon-se
     image: a002k/helidon-se:latest
+    ports:
+      - "8080:8080"
+    networks:
+      - bridge-net
+
+networks:
+  bridge-net:
+    driver: bridge

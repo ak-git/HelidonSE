@@ -73,11 +73,11 @@ git tag 2025.02
 ## Run docker image
 
 ```shell
-docker run --rm a002k/helidon-se
+docker run --rm -p 8080:8080 a002k/helidon-se
 ```
 
 ```shell
-docker run -d --name helidon-se --rm a002k/helidon-se
+docker run -d --name helidon-se --rm -p 8080:8080 a002k/helidon-se
 ```
 
 - ```-i``` Keep STDIN open even if not attached
