@@ -9,7 +9,7 @@ johnrengelman-shadow = '8.1.1'
 
 jspecify = '1.0.0'
 assertj = '3.27.3'
-helidon = '4.1.6'
+helidon = '4.1.7'
 
 [plugins]
 sonarqube = { id = 'org.sonarqube', version.ref = 'sonarqube' }
