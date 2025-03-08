@@ -12,7 +12,7 @@ final class GreetService implements HttpService {
   private final AtomicReference<String> config = new AtomicReference<>();
 
   GreetService() {
-    this(Config.global().get("app"));
+    this(Config.create().get("app"));
   }
 
   GreetService(Config appConfig) {

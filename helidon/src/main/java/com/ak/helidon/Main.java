@@ -17,7 +17,6 @@ public class Main {
     LogConfig.configureRuntime();
 
     Config config = Config.create();
-    Config.global(config);
 
     WebServer server = WebServer.builder().config(config.get("server")).routing(Main::routing).build().start();
     Logger.getLogger(Main.class.getName()).info(() -> "WEB server is up! http://localhost:%d/simple-greet%n".formatted(server.port()));
