@@ -5,7 +5,7 @@ spotbugs = '6.1.7'
 ben-manes-versions = '0.52.0'
 nebula-lint = '20.5.6'
 jgitver = '0.10.0-rc03'
-johnrengelman-shadow = '8.1.1'
+gradleup-shadow = '9.0.0-beta10'
 
 jspecify = '1.0.0'
 assertj = '3.27.3'
@@ -18,7 +18,7 @@ spotbugs = { id = 'com.github.spotbugs', version.ref = 'spotbugs' }
 ben-manes-versions = { id = 'com.github.ben-manes.versions', version.ref = 'ben-manes-versions' }
 nebula-lint = { id = 'nebula.lint', version.ref = 'nebula-lint' }
 jgitver = { id = 'fr.brouillard.oss.gradle.jgitver', version.ref = 'jgitver' }
-johnrengelman-shadow = { id = 'com.github.johnrengelman.shadow', version.ref = 'johnrengelman-shadow' }
+gradleup-shadow = { id = 'com.gradleup.shadow', version.ref = 'gradleup-shadow' }
 
 [libraries]
 jspecify = { module = 'org.jspecify:jspecify', version.ref = 'jspecify' }
