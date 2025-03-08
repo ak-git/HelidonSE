@@ -23,4 +23,30 @@ gradleup-shadow = { id = 'com.gradleup.shadow', version.ref = 'gradleup-shadow' 
 [libraries]
 jspecify = { module = 'org.jspecify:jspecify', version.ref = 'jspecify' }
 assertj = { module = 'org.assertj:assertj-core', version.ref = 'assertj' }
-helidon = { module = 'io.helidon:helidon-dependencies', version.ref = 'helidon'}
+helidon = { module = 'io.helidon:helidon-dependencies', version.ref = 'helidon' }
+
+helidon-webserver = { module = 'io.helidon.webserver:helidon-webserver' }
+helidon-config = { module = 'io.helidon.config:helidon-config' }
+helidon-common-config = { module = 'io.helidon.common:helidon-common-config' }
+helidon-common-parameters = { module = 'io.helidon.common:helidon-common-parameters' }
+helidon-http = { module = 'io.helidon.http:helidon-http' }
+helidon-http-media = { module = 'io.helidon.http.media:helidon-http-media' }
+helidon-logging-common = { module = 'io.helidon.logging:helidon-logging-common' }
+
+helidon-config-yaml = { module = 'io.helidon.config:helidon-config-yaml' }
+helidon-logging-jul = { module = 'io.helidon.logging:helidon-logging-jul' }
+
+helidon-webclient-api = { module = 'io.helidon.webclient:helidon-webclient-api' }
+helidon-webclient-http1 = { module = 'io.helidon.webclient:helidon-webclient-http1' }
+helidon-webserver-testing-junit5 = { module = 'io.helidon.webserver.testing.junit5:helidon-webserver-testing-junit5' }
+junit-jupiter-api = { module = 'org.junit.jupiter:junit-jupiter-api' }
+junit-jupiter-params = { module = 'org.junit.jupiter:junit-jupiter-params' }
+
+junit-jupiter-engine = { module = 'org.junit.jupiter:junit-jupiter-engine' }
+
+[bundles]
+helidon-implementation = ['helidon-webserver', 'helidon-config', 'helidon-common-config', 'helidon-common-parameters',
+    'helidon-http', 'helidon-http-media', 'helidon-logging-common']
+helidon-runtime-only = ['helidon-config-yaml', 'helidon-logging-jul']
+test-implementation = ['assertj', 'helidon-webclient-api', 'helidon-webclient-http1', 'helidon-webserver-testing-junit5',
+    'junit-jupiter-api', 'junit-jupiter-params']

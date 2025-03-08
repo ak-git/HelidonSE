@@ -7,23 +7,10 @@ plugins {
 dependencies {
     implementation libs.jspecify
     implementation enforcedPlatform(libs.helidon)
-    implementation 'io.helidon.webserver:helidon-webserver'
-    implementation 'io.helidon.config:helidon-config'
-    implementation 'io.helidon.common:helidon-common-config'
-    implementation 'io.helidon.common:helidon-common-parameters'
-    implementation 'io.helidon.http:helidon-http'
-    implementation 'io.helidon.http.media:helidon-http-media'
-    implementation 'io.helidon.logging:helidon-logging-common'
-    runtimeOnly 'io.helidon.config:helidon-config-yaml'
-    runtimeOnly 'io.helidon.logging:helidon-logging-jul'
-
-    testImplementation 'org.junit.jupiter:junit-jupiter-api'
-    testImplementation 'org.junit.jupiter:junit-jupiter-params'
-    testImplementation 'io.helidon.webclient:helidon-webclient-api'
-    testImplementation 'io.helidon.webclient:helidon-webclient-http1'
-    testImplementation 'io.helidon.webserver.testing.junit5:helidon-webserver-testing-junit5'
-    testImplementation libs.assertj
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    implementation libs.bundles.helidon.implementation
+    runtimeOnly libs.bundles.helidon.runtime.only
+    testImplementation libs.bundles.test.implementation
+    implementation libs.junit.jupiter.engine
 }
 
 shadowJar {
