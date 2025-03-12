@@ -10,7 +10,7 @@ dependencies {
     implementation libs.bundles.helidon.implementation
     runtimeOnly libs.bundles.helidon.runtime.only
     testImplementation libs.bundles.test.implementation
-    implementation libs.junit.jupiter.engine
+    runtimeOnly libs.junit.jupiter.engine
 }
 
 shadowJar {
