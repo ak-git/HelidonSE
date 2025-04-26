@@ -20,12 +20,12 @@ jobs:
       - uses: actions/setup-java@v4
         with:
           distribution: oracle
-          java-version: 23
+          java-version: 24
           cache: 'gradle'
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
-          gradle-version: '8.13'
+          gradle-version: '8.14'
       - name: Cache SonarCloud packages
         uses: actions/cache@v4
         with:
