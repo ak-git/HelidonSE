@@ -9,7 +9,7 @@ gradleup-shadow = '9.0.0-beta13'
 
 jspecify = '1.0.0'
 assertj = '3.27.3'
-helidon = '4.2.1'
+helidon = '4.2.2'
 
 [plugins]
 sonarqube = { id = 'org.sonarqube', version.ref = 'sonarqube' }
