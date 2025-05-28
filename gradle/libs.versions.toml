@@ -5,7 +5,7 @@ spotbugs = '6.1.12'
 ben-manes-versions = '0.52.0'
 nebula-lint = '20.5.8'
 jgitver = '0.10.0-rc03'
-gradleup-shadow = '9.0.0-beta14'
+gradleup-shadow = '9.0.0-beta15'
 
 jspecify = '1.0.0'
 assertj = '3.27.3'
