@@ -4,7 +4,7 @@ jacocolog = '3.1.0'
 spotbugs = '6.2.1'
 ben-manes-versions = '0.52.0'
 jgitver = '0.10.0-rc03'
-gradleup-shadow = '9.0.0-beta17'
+gradleup-shadow = '9.0.0-rc1'
 
 jspecify = '1.0.0'
 assertj = '3.27.3'
