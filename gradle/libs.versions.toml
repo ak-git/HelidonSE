@@ -4,7 +4,6 @@ jacocolog = '3.1.0'
 spotbugs = '6.2.2'
 ben-manes-versions = '0.52.0'
 jgitver = '0.10.0-rc03'
-gradleup-shadow = '9.0.0-rc3'
 
 jspecify = '1.0.0'
 assertj = '3.27.3'
@@ -16,7 +15,6 @@ jacocolog = { id = 'org.barfuin.gradle.jacocolog', version.ref = 'jacocolog' }
 spotbugs = { id = 'com.github.spotbugs', version.ref = 'spotbugs' }
 ben-manes-versions = { id = 'com.github.ben-manes.versions', version.ref = 'ben-manes-versions' }
 jgitver = { id = 'fr.brouillard.oss.gradle.jgitver', version.ref = 'jgitver' }
-gradleup-shadow = { id = 'com.gradleup.shadow', version.ref = 'gradleup-shadow' }
 
 [libraries]
 jspecify = { module = 'org.jspecify:jspecify', version.ref = 'jspecify' }
