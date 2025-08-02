@@ -1,4 +1,4 @@
-FROM openjdk:23
+FROM openjdk:24
 
 # Create a custom user with UID 1234 and GID 1234
 # https://www.docker.com/blog/understanding-the-docker-user-instruction/
