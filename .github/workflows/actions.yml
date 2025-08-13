@@ -41,10 +41,10 @@ jobs:
       - name: Build and analyze
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: gradle build jacocoAggregatedReport sonar --info --no-configuration-cache
+        run: gradle build jacocoAggregatedReport sonar --info
       - name: Compute version
         run: |
-          gradle version --no-configuration-cache
+          gradle version
           echo "BUILD_VERSION=$(gradle version | grep Version | awk '{ print $2 }')" >> $GITHUB_ENV
       - name: Login to Docker Hub
         run: docker login -u $DOCKER_USER -p ${{ secrets.DOCKER_PASSWORD }}
