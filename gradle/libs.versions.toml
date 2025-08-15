@@ -7,7 +7,7 @@ jgitver = '0.10.0-rc03'
 
 jspecify = '1.0.0'
 assertj = '3.27.4'
-helidon = '4.2.5'
+helidon = '4.2.6'
 
 [plugins]
 sonarqube = { id = 'org.sonarqube', version.ref = 'sonarqube' }
