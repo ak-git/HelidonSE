@@ -35,3 +35,6 @@ profile
 
 # TLS Certificates
 .certs/
+
+# Logs
+*.log
