@@ -6,7 +6,12 @@ services:
       - "8080:8080"
     networks:
       - bridge-net
+    volumes:
+      - helidon-se:/home/app-user/
 
 networks:
   bridge-net:
     driver: bridge
+
+volumes:
+  helidon-se:
