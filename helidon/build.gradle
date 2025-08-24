@@ -7,7 +7,7 @@ dependencies {
     implementation libs.jspecify
     implementation enforcedPlatform(libs.helidon)
     implementation libs.bundles.helidon.implementation
-    runtimeOnly libs.bundles.helidon.runtime.only
+    runtimeOnly libs.helidon.config.hocon
     testImplementation libs.bundles.test.implementation
     testRuntimeOnly libs.junit.jupiter.engine
     testRuntimeOnly libs.junit.platform.launcher

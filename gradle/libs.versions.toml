@@ -29,8 +29,7 @@ helidon-http = { module = 'io.helidon.http:helidon-http' }
 helidon-http-media = { module = 'io.helidon.http.media:helidon-http-media' }
 helidon-logging-common = { module = 'io.helidon.logging:helidon-logging-common' }
 
-helidon-config-yaml = { module = 'io.helidon.config:helidon-config-yaml' }
-helidon-logging-jul = { module = 'io.helidon.logging:helidon-logging-jul' }
+helidon-config-hocon = { module = 'io.helidon.config:helidon-config-hocon' }
 
 helidon-webclient-api = { module = 'io.helidon.webclient:helidon-webclient-api' }
 helidon-webclient-http1 = { module = 'io.helidon.webclient:helidon-webclient-http1' }
@@ -44,6 +43,5 @@ junit-platform-launcher = { module = 'org.junit.platform:junit-platform-launcher
 [bundles]
 helidon-implementation = ['helidon-webserver', 'helidon-config', 'helidon-common-config', 'helidon-common-parameters',
     'helidon-http', 'helidon-http-media', 'helidon-logging-common']
-helidon-runtime-only = ['helidon-config-yaml', 'helidon-logging-jul']
 test-implementation = ['assertj', 'helidon-webclient-api', 'helidon-webclient-http1', 'helidon-webserver-testing-junit5',
     'junit-jupiter-api', 'junit-jupiter-params']
