@@ -3,5 +3,6 @@ module com.ak.helidon {
   requires java.logging;
   requires io.helidon.webserver;
   requires io.helidon.logging.common;
+  requires io.helidon.config;
   exports com.ak.helidon;
 }

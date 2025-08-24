@@ -23,7 +23,8 @@ public class Main {
   }
 
   static void routing(HttpRouting.Builder routing) {
-    routing.register("/greet", new GreetService())
-        .get("/simple-greet", (_, res) -> res.send("Hello World!"));
+    routing
+        .get("/simple-greet", (_, res) -> res.send("Hello World!"))
+        .register("/greet", new GreetService());
   }
 }

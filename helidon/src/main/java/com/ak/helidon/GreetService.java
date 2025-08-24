@@ -9,15 +9,9 @@ import io.helidon.webserver.http.ServerResponse;
 import java.util.concurrent.atomic.AtomicReference;
 
 final class GreetService implements HttpService {
-  private final AtomicReference<String> config = new AtomicReference<>();
-
-  GreetService() {
-    this(Config.create().get("app"));
-  }
-
-  GreetService(Config appConfig) {
-    config.set(appConfig.get("greeting").asString().orElse("Ciao"));
-  }
+  private final AtomicReference<String> config = new AtomicReference<>(
+      Config.create().get("app").get("greeting").asString().orElse("Ciao")
+  );
 
   @Override
   public void routing(HttpRules rules) {
