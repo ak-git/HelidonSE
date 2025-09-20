@@ -1,4 +1,4 @@
-FROM openjdk:25-jdk-slim@sha256:988f9f2e77fc48ef3c81fc429d56110c6f43c35b43493f843f98bb21c6f75333
+FROM openjdk:25-jdk-slim@sha256:4d9bb48a3d5c2015a5e67eeab7575b6b11eda252aee651e632ef57d24aaf2d82
 
 # Create a custom user with UID 1234 and GID 1234
 # https://www.docker.com/blog/understanding-the-docker-user-instruction/
