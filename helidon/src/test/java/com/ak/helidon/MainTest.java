@@ -6,6 +6,6 @@ import org.junit.jupiter.api.Test;
 class MainTest {
   @Test
   void test() {
-    Assertions.assertDoesNotThrow(() -> Main.main(new String[]{}));
+    Assertions.assertDoesNotThrow(Main::main);
   }
 }
