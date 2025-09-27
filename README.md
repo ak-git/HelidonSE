@@ -59,7 +59,7 @@ git tag 2025.08
 ### Plugin [com.github.ben-manes.versions](https://github.com/ben-manes/gradle-versions-plugin)
 
 ```shell
-./gradlew dependencyUpdates
+./gradlew dependencyUpdates --no-parallel
 ```
 
 ## Check dependencies

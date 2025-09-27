@@ -23,7 +23,7 @@ jobs:
           java-version: 25
           cache: 'gradle'
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v4
+        uses: gradle/actions/setup-gradle@748248ddd2a24f49513d8f472f81c3a07d4d50e1
         with:
           gradle-version: '9.1.0'
       - name: Cache SonarCloud packages
@@ -49,7 +49,9 @@ jobs:
           gradle version
           echo "BUILD_VERSION=$(gradle version | grep Version | awk '{ print $2 }')" >> $GITHUB_ENV
       - name: Login to Docker Hub
-        run: docker login -u $DOCKER_USER -p ${{ secrets.DOCKER_PASSWORD }}
+        env:
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
       - name: Build and tag the Docker image
         run: docker build -t $DOCKER_USER/$DOCKER_IMAGE:${{ env.BUILD_VERSION }} -t $DOCKER_USER/$DOCKER_IMAGE:latest .
       - name: Push the Docker image
