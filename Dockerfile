@@ -10,7 +10,7 @@ WORKDIR /home/runner
 
 # Extract from .tar and copy the app files from host machine to image filesystem
 ADD helidon/build/distributions/helidon-*.tar .
-RUN mv helidon-* app && chown -R runner:runner-group app
+RUN mv helidon-* app && chown -R runner:runner-group app && mkdir data && chown -R runner:runner-group data
 
 # Switch to the custom user
 USER runner

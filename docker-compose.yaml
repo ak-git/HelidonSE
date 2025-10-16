@@ -7,7 +7,7 @@ services:
     networks:
       - bridge-net
     volumes:
-      - helidon-se:/home/runner/
+      - helidon-se:/home/runner/data
 
 networks:
   bridge-net:
