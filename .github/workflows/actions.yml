@@ -23,7 +23,7 @@ jobs:
           java-version: 25
           cache: 'gradle'
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@42e84910d5c1c63d3ae8f7e47df8e4cd06e453e7
+        uses: gradle/actions/setup-gradle@f106089dd9553102a72aa474f9ad9a4edacde6a7
         with:
           gradle-version: '9.1.0'
       - name: Cache SonarCloud packages
