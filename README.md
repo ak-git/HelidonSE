@@ -51,7 +51,7 @@ curl -X PUT -d 'Howdy' http://localhost:8080/greet/greeting
 ### Update version and add git tag
 
 ```shell
-git tag 2025.08
+git tag 2026.01
 ```
 
 ## Update dependencies
