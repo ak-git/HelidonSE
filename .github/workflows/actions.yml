@@ -2,9 +2,9 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "feature/bot" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "feature/bot" ]
 
 env:
   DOCKER_USER: a002k
@@ -53,6 +53,6 @@ jobs:
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
       - name: Build and tag the Docker image
-        run: docker build -t $DOCKER_USER/$DOCKER_IMAGE:${{ env.BUILD_VERSION }} -t $DOCKER_USER/$DOCKER_IMAGE:latest .
+        run: docker build -t $DOCKER_USER/$DOCKER_IMAGE:${{ env.BUILD_VERSION }} -t $DOCKER_USER/$DOCKER_IMAGE:bot .
       - name: Push the Docker image
         run: docker push $DOCKER_USER/$DOCKER_IMAGE --all-tags

@@ -16,12 +16,10 @@ public class Main {
   public static void main() {
     LogConfig.configureRuntime();
     WebServer server = WebServer.builder().config(Config.create().get("server")).routing(Main::routing).build().start();
-    Logger.getLogger(Main.class.getName()).info(() -> "WEB server is up! http://localhost:%d/simple-greet%n".formatted(server.port()));
+    Logger.getLogger(Main.class.getName()).info(() -> "WEB server is up! http://localhost:%d/%n".formatted(server.port()));
   }
 
   static void routing(HttpRouting.Builder routing) {
-    routing
-        .get("/simple-greet", (_, res) -> res.send("Hello World!"))
-        .register("/greet", new GreetService());
+    routing.register("/", new BotService());
   }
 }

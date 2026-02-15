@@ -1,9 +1,10 @@
 services:
   helidon-se:
     container_name: helidon-se
-    image: a002k/helidon-se:latest
+    image: a002k/helidon-se:bot
     environment:
-      - APP_GREETING=${APP_GREETING:-'Greeting from docker-compose'}
+      - BOT_ADMIN=${BOT_ADMIN}
+      - BOT_TOKEN=${BOT_TOKEN}
     ports:
       - "8080:8080"
     networks:
