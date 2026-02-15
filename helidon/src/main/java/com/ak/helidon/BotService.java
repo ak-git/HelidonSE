@@ -89,13 +89,22 @@ final class BotService implements HttpService {
     rules.get("/", (_, res) -> {
       String send;
       if (nowWinner.get() == 0L) {
-        send = "%d%n%n%s".formatted(answers.size(), users.values().stream().collect(Collectors.joining("%n".formatted())));
+        send = "%d%n%n%s".formatted(answers.size(), users.entrySet().stream().sorted(Map.Entry.comparingByKey())
+            .map(e -> {
+              if (winners.contains(e.getKey())) {
+                return "WIN %s".formatted(e.getValue());
+              }
+              else {
+                return e.getValue();
+              }
+            })
+            .collect(Collectors.joining("%n".formatted())));
       }
       else {
         send = this.answers.entrySet().stream()
             .collect(Collectors.toMap(e -> users.get(e.getKey()), e -> {
               if (nowWinner.get() == e.getKey()) {
-                return e.getValue() + " WIN ";
+                return "%d WIN".formatted(e.getValue());
               }
               else {
                 return e.getValue();
