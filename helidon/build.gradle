@@ -7,7 +7,8 @@ dependencies {
     implementation libs.jspecify
     implementation enforcedPlatform(libs.helidon)
     implementation libs.bundles.helidon.implementation
-    implementation 'com.github.pengrad:java-telegram-bot-api:9.3.0'
+    implementation 'com.github.pengrad:java-telegram-bot-api:9.4.0'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:2.3.10'
     runtimeOnly libs.bundles.helidon.runtime.only
     testImplementation libs.bundles.test.implementation
     testRuntimeOnly libs.junit.jupiter.engine
