@@ -6,5 +6,6 @@ module com.ak.helidon {
   requires io.helidon.config;
   requires telegram.bot.api;
   requires kotlin.stdlib;
+  requires com.google.gson;
   exports com.ak.helidon;
 }
