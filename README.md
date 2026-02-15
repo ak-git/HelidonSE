@@ -102,6 +102,12 @@ docker stop helidon-se
 docker compose run -d --name helidon-se --rm helidon-se
 ```
 
+Use ```./.env``` file or overwrite as
+
+```shell
+APP_GREETING=Greet docker compose up -d
+```
+
 and follow ```-f``` logs
 
 ```shell

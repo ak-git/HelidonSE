@@ -2,6 +2,8 @@ services:
   helidon-se:
     container_name: helidon-se
     image: a002k/helidon-se:latest
+    environment:
+      - APP_GREETING=${APP_GREETING:-'Greeting from docker-compose'}
     ports:
       - "8080:8080"
     networks:
