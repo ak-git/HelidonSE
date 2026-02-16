@@ -80,7 +80,7 @@ final class BotService implements HttpService {
           bot.execute(new SendMessage(chatId, send));
         }
       });
-      return UpdatesListener.CONFIRMED_UPDATES_ALL; // Подтверждаем получение
+      return UpdatesListener.CONFIRMED_UPDATES_ALL;
     });
   }
 
@@ -95,7 +95,7 @@ final class BotService implements HttpService {
                 return "WIN %s".formatted(e.getValue());
               }
               else {
-                return e.getValue();
+                return "    %s".formatted(e.getValue());
               }
             })
             .collect(Collectors.joining("%n".formatted())));
