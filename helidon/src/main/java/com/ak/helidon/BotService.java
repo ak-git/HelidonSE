@@ -12,9 +12,12 @@ import io.helidon.webserver.http.HttpService;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 final class BotService implements HttpService {
+  private static final Logger LOGGER = Logger.getLogger(BotService.class.getName());
   private static final Config CONFIG = Config.create().get("bot");
   private static final String BOT_TOKEN = CONFIG.get("token").asString().orElseThrow();
   private static final long BOT_ADMIN = CONFIG.get("admin").asLong().orElseThrow();
@@ -77,7 +80,10 @@ final class BotService implements HttpService {
               send = "[1..100]";
             }
           }
+          Level level = user.id().equals(BOT_ADMIN) ? Level.WARNING : Level.INFO;
+          LOGGER.log(level, "%s %s".formatted(users.get(user.id()), message.text()));
           bot.execute(new SendMessage(chatId, send));
+          LOGGER.log(level, "%s %s".formatted(users.get(user.id()), send));
         }
       });
       return UpdatesListener.CONFIRMED_UPDATES_ALL;
