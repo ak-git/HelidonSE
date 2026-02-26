@@ -1,5 +1,5 @@
 module com.ak.helidon {
-  requires org.jspecify;
+  requires static org.jspecify;
   requires java.logging;
   requires io.helidon.webserver;
   requires io.helidon.logging.common;

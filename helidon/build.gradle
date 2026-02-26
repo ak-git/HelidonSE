@@ -4,11 +4,12 @@ plugins {
 }
 
 dependencies {
-    implementation libs.jspecify
+    compileOnly libs.jspecify
     implementation enforcedPlatform(libs.helidon)
     implementation libs.bundles.helidon.implementation
     runtimeOnly libs.bundles.helidon.runtime.only
     testImplementation libs.bundles.test.implementation
+    testCompileOnly libs.jspecify
     testRuntimeOnly libs.junit.jupiter.engine
     testRuntimeOnly libs.junit.platform.launcher
 }
