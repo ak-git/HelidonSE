@@ -12,6 +12,9 @@ dependencies {
     testCompileOnly libs.jspecify
     testRuntimeOnly libs.junit.jupiter.engine
     testRuntimeOnly libs.junit.platform.launcher
+
+    annotationProcessor enforcedPlatform(libs.helidon)
+    annotationProcessor libs.bundles.helidon.apt
 }
 
 application {

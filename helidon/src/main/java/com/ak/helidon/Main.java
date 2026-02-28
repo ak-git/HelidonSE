@@ -4,24 +4,27 @@ package com.ak.helidon;
 
 import io.helidon.config.Config;
 import io.helidon.logging.common.LogConfig;
-import io.helidon.webserver.WebServer;
-import io.helidon.webserver.http.HttpRouting;
+import io.helidon.service.registry.Service;
+import io.helidon.service.registry.ServiceRegistryManager;
 
 import java.util.logging.Logger;
 
+@Service.GenerateBinding
 public class Main {
+  static {
+    LogConfig.initClass();
+  }
+  private static final Logger LOGGER = Logger.getLogger(Main.class.getName());
+
   private Main() {
   }
 
   public static void main() {
     LogConfig.configureRuntime();
-    WebServer server = WebServer.builder().config(Config.create().get("server")).routing(Main::routing).build().start();
-    Logger.getLogger(Main.class.getName()).info(() -> "WEB server is up! http://localhost:%d/simple-greet%n".formatted(server.port()));
-  }
-
-  static void routing(HttpRouting.Builder routing) {
-    routing
-        .get("/simple-greet", (_, res) -> res.send("Hello World!"))
-        .register("/greet", new GreetService());
+    ServiceRegistryManager.start(ApplicationBinding.create());
+    LOGGER.info(
+        () -> "WEB server is up! http://localhost:%d/simple-greet%n"
+            .formatted(Config.create().get("server").get("port").asInt().orElseThrow())
+    );
   }
 }

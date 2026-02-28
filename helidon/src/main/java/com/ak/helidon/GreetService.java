@@ -2,16 +2,16 @@ package com.ak.helidon;
 
 import io.helidon.config.Config;
 import io.helidon.http.Status;
+import io.helidon.service.registry.Service;
 import io.helidon.webserver.http.HttpRules;
 import io.helidon.webserver.http.HttpService;
 import io.helidon.webserver.http.ServerResponse;
 
 import java.util.concurrent.atomic.AtomicReference;
 
+@Service.Singleton
 final class GreetService implements HttpService {
-  private final AtomicReference<String> config = new AtomicReference<>(
-      Config.create().get("app").get("greeting").asString().orElse("Ciao")
-  );
+  private final AtomicReference<String> greeting = new AtomicReference<>(GreetConfig.create(Config.create().get("app")).greeting());
 
   @Override
   public void routing(HttpRules rules) {
@@ -22,11 +22,11 @@ final class GreetService implements HttpService {
   }
 
   private void sendResponse(ServerResponse response, String name) {
-    response.send("%s %s!".formatted(config.get(), name));
+    response.send("%s %s!".formatted(greeting.get(), name));
   }
 
   private void updateGreeting(String update, ServerResponse response) {
-    config.set(update);
+    greeting.set(update);
     response.status(Status.NO_CONTENT_204).send();
   }
 }

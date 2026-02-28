@@ -4,8 +4,6 @@ package com.ak.helidon;
 import io.helidon.http.Status;
 import io.helidon.webclient.api.ClientResponseTyped;
 import io.helidon.webclient.http1.Http1Client;
-import io.helidon.webserver.http.HttpRouting;
-import io.helidon.webserver.testing.junit5.SetUpRoute;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -16,11 +14,6 @@ abstract class AbstractMainTest {
 
   protected AbstractMainTest(Http1Client client) {
     this.client = client;
-  }
-
-  @SetUpRoute
-  static void routing(HttpRouting.Builder builder) {
-    Main.routing(builder);
   }
 
   @ParameterizedTest

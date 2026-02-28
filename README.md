@@ -1,19 +1,26 @@
 # Simple HelidonSE Application with Gradle and Docker support
 
-## A simple service to greet you. Examples:
+## A simple service to greet you.
+
+Inspired by
+1. https://medium.com/helidon/helidon-injection-4f3321ee7231
+2. https://github.com/helidon-io/helidon-examples/blob/helidon-4.x/examples/quickstarts/helidon-quickstart-inject/src/test/resources/application-test.yaml
+
+
+## Examples:
 
 ### Get default greeting message:
 
 http://localhost:8080/simple-greet
 
 ```shell
-curl -X GET http://localhost:8080/simple-greet
+curl -w "\n" http://localhost:8080/simple-greet
 ```
 
 http://localhost:8080/greet
 
 ```shell
-curl -X GET http://localhost:8080/greet
+curl -w "\n" http://localhost:8080/greet
 ```
 
 ### Get greeting message for Joe:
@@ -21,13 +28,13 @@ curl -X GET http://localhost:8080/greet
 http://localhost:8080/greet/Joe
 
 ```shell
-curl -X GET http://localhost:8080/greet/Joe
+curl -w "\n" http://localhost:8080/greet/Joe
 ```
 
 ### Change greeting
 
 ```shell
-curl -X PUT -d 'Howdy' http://localhost:8080/greet/greeting
+curl -w "\n" -X PUT -d 'Howdy' http://localhost:8080/greet/greeting
 ```
 
 ## Run using Gradle
@@ -51,7 +58,7 @@ curl -X PUT -d 'Howdy' http://localhost:8080/greet/greeting
 ### Update version and add git tag
 
 ```shell
-git tag 2026.01
+git tag 2026.03
 ```
 
 ## Update dependencies
