@@ -30,6 +30,7 @@ helidon-common-parameters = { module = 'io.helidon.common:helidon-common-paramet
 helidon-webserver = { module = 'io.helidon.webserver:helidon-webserver' }
 helidon-config = { module = 'io.helidon.config:helidon-config' }
 helidon-config-hocon = { module = 'io.helidon.config:helidon-config-hocon' }
+helidon-config-metadata = { module = 'io.helidon.config:helidon-config-metadata' }
 helidon-http = { module = 'io.helidon.http:helidon-http' }
 helidon-http-media = { module = 'io.helidon.http.media:helidon-http-media' }
 helidon-logging-common = { module = 'io.helidon.logging:helidon-logging-common' }
@@ -51,7 +52,7 @@ junit-platform-launcher = { module = 'org.junit.platform:junit-platform-launcher
 [bundles]
 helidon-implementation = ['helidon-webserver', 'helidon-service-registry', 'helidon-builder-api',
     'helidon-common', 'helidon-common-config', 'helidon-common-types',
-    'helidon-config', 'helidon-common-parameters', 'helidon-http', 'helidon-http-media', 'helidon-logging-common']
+    'helidon-config', 'helidon-config-metadata', 'helidon-common-parameters', 'helidon-http', 'helidon-http-media', 'helidon-logging-common']
 helidon-runtime-only = ['helidon-config-hocon', 'helidon-logging-jul']
 helidon-apt = ['helidon-codegen-apt', 'helidon-service-codegen', 'helidon-builder-codegen']
 test-implementation = ['assertj', 'helidon-webclient-api', 'helidon-webclient-http1', 'helidon-webserver-testing-junit5',
