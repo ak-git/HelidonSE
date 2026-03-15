@@ -52,7 +52,8 @@ junit-platform-launcher = { module = 'org.junit.platform:junit-platform-launcher
 [bundles]
 helidon-implementation = ['helidon-webserver', 'helidon-service-registry', 'helidon-builder-api',
     'helidon-common', 'helidon-common-config', 'helidon-common-types',
-    'helidon-config', 'helidon-config-metadata', 'helidon-common-parameters', 'helidon-http', 'helidon-http-media', 'helidon-logging-common']
+    'helidon-config', 'helidon-common-parameters', 'helidon-http', 'helidon-http-media', 'helidon-logging-common']
+helidon-compile-only = ['helidon-config-metadata']
 helidon-runtime-only = ['helidon-config-hocon', 'helidon-logging-jul']
 helidon-apt = ['helidon-codegen-apt', 'helidon-service-codegen', 'helidon-builder-codegen']
 test-implementation = ['assertj', 'helidon-webclient-api', 'helidon-webclient-http1', 'helidon-webserver-testing-junit5',

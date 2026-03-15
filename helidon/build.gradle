@@ -4,9 +4,10 @@ plugins {
 }
 
 dependencies {
-    compileOnly libs.jspecify
     implementation enforcedPlatform(libs.helidon)
     implementation libs.bundles.helidon.implementation
+    compileOnly libs.jspecify
+    compileOnly libs.bundles.helidon.compile.only
     runtimeOnly libs.bundles.helidon.runtime.only
     testImplementation libs.bundles.test.implementation
     testCompileOnly libs.jspecify
