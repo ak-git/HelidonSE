@@ -21,7 +21,7 @@ jobs:
       - uses: actions/setup-java@v5
         with:
           distribution: oracle
-          java-version: 25
+          java-version: 26
           cache: 'gradle'
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@11d4d83c63a6ce61b32d8a9c4faddbdb04fe9917
