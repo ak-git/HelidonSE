@@ -8,7 +8,7 @@ plugins {
     alias(libs.plugins.ben.manes.versions)
     alias(libs.plugins.sonarqube)
     alias(libs.plugins.jacocolog)
-    alias(libs.plugins.jgitver)
+    alias(libs.plugins.git.semver)
 }
 
 spotbugs {
@@ -37,6 +37,8 @@ allprojects {
     apply plugin: 'idea'
     apply plugin: 'jacoco'
     apply plugin: 'org.barfuin.gradle.jacocolog'
+
+    version = semver.version
 
     idea {
         module {
