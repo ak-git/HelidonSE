@@ -45,16 +45,16 @@ curl -w "\n" -X PUT -d 'Howdy' http://localhost:8080/greet/greeting
 
 ## [Semantic versioning](https://zoltanaltfatter.com/2020/04/10/semantic-versioning-with-jgitver/)
 
-### Plugin [com.github.jmongard.git-semver-plugin](https://github.com/jmongard/Git.SemVersioning.Gradle)
+### Plugin [axion-release-plugin](https://github.com/allegro/axion-release-plugin)
 
 ```shell
-./gradlew printVersion
+./gradlew currentVersion -q -Prelease.quiet
 ```
 
 ### Update version
 
 ```shell
-gradle releaseVersion
+gradle release
 ```
 
 ### Add git tag
@@ -65,7 +65,7 @@ git tag 2026.04
 
 ## Update dependencies
 
-### Plugin [com.github.ben-manes.versions](https://github.com/ben-manes/gradle-versions-plugin)
+### Plugin [io.github.ben-manes.versions](https://github.com/ben-manes/gradle-versions-plugin)
 
 ```shell
 ./gradlew dependencyUpdates --no-parallel

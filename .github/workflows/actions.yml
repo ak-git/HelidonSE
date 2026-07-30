@@ -47,8 +47,8 @@ jobs:
         run: gradle build jacocoTestReport sonar --info
       - name: Compute version
         run: |
-          gradle printVersion
-          echo "BUILD_VERSION=$(gradle printVersion -q)" >> $GITHUB_ENV
+          gradle currentVersion -q -Prelease.quiet
+          echo "BUILD_VERSION=$(gradle currentVersion -q -Prelease.quiet)" >> $GITHUB_ENV
       - name: Login to Docker Hub
         env:
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}

@@ -38,7 +38,7 @@ allprojects {
     apply plugin: 'jacoco'
     apply plugin: 'org.barfuin.gradle.jacocolog'
 
-    version = semver.version
+    version = scmVersion.version
 
     idea {
         module {

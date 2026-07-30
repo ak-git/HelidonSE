@@ -8,18 +8,18 @@
       <profile name="Gradle Imported" enabled="true">
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.helidon.codegen/helidon-codegen-apt/4.5.0/bc7720ead577012bbfe7a21d68097a47321fc6d9/helidon-codegen-apt-4.5.0.jar" />
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.helidon.service/helidon-service-codegen/4.5.0/a2f233e0dcc08951fbcfa4eb531a2cf17e41f61c/helidon-service-codegen-4.5.0.jar" />
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.helidon.builder/helidon-builder-codegen/4.5.0/bfdf7088a9b1204b3c593c7407152026d78adfad/helidon-builder-codegen-4.5.0.jar" />
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.helidon.codegen/helidon-codegen/4.5.0/4b101e32f6a95b684d0b8702b2f0057064459b1f/helidon-codegen-4.5.0.jar" />
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.helidon.codegen/helidon-codegen-class-model/4.5.0/88dad32c1f35110d781a322dd9978054bcaa0742/helidon-codegen-class-model-4.5.0.jar" />
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.helidon.service/helidon-service-metadata/4.5.0/12d8bf02504175eea92958f2f4b78c60ac6a826f/helidon-service-metadata-4.5.0.jar" />
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.helidon.common/helidon-common-types/4.5.0/3c3eb6ea3dd1e2f904ac1aef52f8039045e87e97/helidon-common-types-4.5.0.jar" />
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.helidon.builder/helidon-builder-api/4.5.0/c9f7557fd24c959fed7f6f9f6738474ad6b406a3/helidon-builder-api-4.5.0.jar" />
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.helidon.metadata/helidon-metadata-hson/4.5.0/53a4cd72d87912023d0337dfbc7071e15c88d452/helidon-metadata-hson-4.5.0.jar" />
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.helidon.common/helidon-common/4.5.0/c017b09c091dbaafdf308892baf74adfc00ca75e/helidon-common-4.5.0.jar" />
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.helidon.common/helidon-common-buffers/4.5.0/88cc715a0c9e5e67583eaef30acde8fa18689fd0/helidon-common-buffers-4.5.0.jar" />
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.helidon.metadata/helidon-metadata/4.5.0/6be5ccb1ee5f6fad38fc8f6ccf5548b73ea031c1/helidon-metadata-4.5.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.helidon.codegen/helidon-codegen-apt/4.5.1/c9f5586bb1aa48e7a2c25bf4fb98a4e645c55b18/helidon-codegen-apt-4.5.1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.helidon.service/helidon-service-codegen/4.5.1/cc99522a0c84141c15340b2dbf74a0016464318d/helidon-service-codegen-4.5.1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.helidon.builder/helidon-builder-codegen/4.5.1/4b2fdcefc30e08bb1cfd3d7e3398440f39dac3ef/helidon-builder-codegen-4.5.1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.helidon.codegen/helidon-codegen/4.5.1/50b03f71d51ce226c4f94d970f24bdd8b1c4eed1/helidon-codegen-4.5.1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.helidon.codegen/helidon-codegen-class-model/4.5.1/c898019f0ddba9339f9285e4082c1a7536985ab/helidon-codegen-class-model-4.5.1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.helidon.service/helidon-service-metadata/4.5.1/64ab7218bc75046711880883181b4b0515f692a1/helidon-service-metadata-4.5.1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.helidon.common/helidon-common-types/4.5.1/a94600dd7eb70b4715720ba0356ffbaf7299742f/helidon-common-types-4.5.1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.helidon.builder/helidon-builder-api/4.5.1/5b2bba52b3ca0d2639d1d1c52386a21c1a1bea83/helidon-builder-api-4.5.1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.helidon.metadata/helidon-metadata-hson/4.5.1/df3323205d2c744c8926a5b3a677196e2ecb972a/helidon-metadata-hson-4.5.1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.helidon.common/helidon-common/4.5.1/63743d01fd228a64e232d59be2277c56eb0d5bbb/helidon-common-4.5.1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.helidon.common/helidon-common-buffers/4.5.1/5f45a043ecd87f3e1fba7c1ae02abd30f422e8f1/helidon-common-buffers-4.5.1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.helidon.metadata/helidon-metadata/4.5.1/b99efd7a82270623c0561b1cb3b9d73a85957df/helidon-metadata-4.5.1.jar" />
         </processorPath>
         <module name="HelidonSE.helidon.main" />
       </profile>
