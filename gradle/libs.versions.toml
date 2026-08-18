@@ -7,7 +7,7 @@ git-semver = '1.21.3'
 
 jspecify = '1.0.1'
 assertj = '3.27.7'
-helidon = '4.5.2'
+helidon = '4.5.3'
 
 [plugins]
 sonarqube = { id = 'org.sonarqube', version.ref = 'sonarqube' }
