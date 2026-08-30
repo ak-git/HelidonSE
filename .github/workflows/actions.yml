@@ -44,8 +44,13 @@ jobs:
       - name: Build and analyze
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          CODE_GENOME_USERNAME: ${{ secrets.CODE_GENOME_USERNAME }}
+          CODE_GENOME_TOKEN: ${{ secrets.CODE_GENOME_TOKEN }}
         run: gradle build jacocoTestReport sonar --info
       - name: Compute version
+        env:
+          CODE_GENOME_USERNAME: ${{ secrets.CODE_GENOME_USERNAME }}
+          CODE_GENOME_TOKEN: ${{ secrets.CODE_GENOME_TOKEN }}
         run: |
           gradle currentVersion -q -Prelease.quiet
           echo "BUILD_VERSION=$(gradle currentVersion -q -Prelease.quiet)" >> $GITHUB_ENV

@@ -3,6 +3,13 @@ pluginManagement {
         gradlePluginPortal()
         mavenCentral()
         maven { url = 'https://jitpack.io' }
+        maven {
+            url = "https://artifacts.codegenomeproject.org/maven"
+            credentials {
+                username = providers.environmentVariable("CODE_GENOME_USERNAME").getOrElse(providers.gradleProperty("codeGenomeUsername").getOrNull())
+                password = providers.environmentVariable("CODE_GENOME_TOKEN").getOrElse(providers.gradleProperty("codeGenomeToken").getOrNull())
+            }
+        }
     }
 }
 

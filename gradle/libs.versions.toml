@@ -4,6 +4,8 @@ jacocolog = '4.0.2'
 spotbugs = '6.5.11'
 ben-manes-versions = '0.61.0'
 git-semver = '1.21.3'
+openrewrite = '7.41.0'
+rewrite-testing-frameworks = '3.44.0'
 
 jspecify = '1.0.1'
 assertj = '3.27.7'
@@ -15,8 +17,11 @@ jacocolog = { id = 'org.barfuin.gradle.jacocolog', version.ref = 'jacocolog' }
 spotbugs = { id = 'com.github.spotbugs', version.ref = 'spotbugs' }
 ben-manes-versions = { id = 'io.github.ben-manes.versions', version.ref = 'ben-manes-versions' }
 git-semver = { id = 'pl.allegro.tech.build.axion-release', version.ref = 'git-semver' }
+openrewrite = { id = 'org.openrewrite.rewrite', version.ref = 'openrewrite' }
 
 [libraries]
+rewrite-testing-frameworks = { module = 'org.openrewrite.recipe:rewrite-testing-frameworks', version.ref = 'rewrite-testing-frameworks' }
+
 jspecify = { module = 'org.jspecify:jspecify', version.ref = 'jspecify' }
 assertj = { module = 'org.assertj:assertj-core', version.ref = 'assertj' }
 helidon = { module = 'io.helidon:helidon-dependencies', version.ref = 'helidon' }

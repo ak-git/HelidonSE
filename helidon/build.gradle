@@ -1,6 +1,7 @@
 plugins {
     id 'java-library'
     id 'application'
+    alias(libs.plugins.openrewrite)
 }
 
 dependencies {
@@ -16,9 +17,18 @@ dependencies {
 
     annotationProcessor enforcedPlatform(libs.helidon)
     annotationProcessor libs.bundles.helidon.apt
+
+    rewrite libs.rewrite.testing.frameworks
 }
 
 application {
     mainModule = 'com.ak.helidon'
     mainClass = 'com.ak.helidon.Main'
+}
+
+rewrite {
+    activeRecipe('org.openrewrite.java.testing.assertj.JUnitToAssertj')
+}
+tasks.withType(Test).configureEach {
+    useJUnitPlatform()
 }
