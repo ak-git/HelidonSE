@@ -28,7 +28,11 @@ application {
 
 rewrite {
     activeRecipe('org.openrewrite.java.testing.assertj.JUnitToAssertj')
+    activeRecipe("org.openrewrite.java.testing.assertj.Assertj")
+    activeRecipe("org.openrewrite.java.testing.hamcrest.MigrateHamcrestToAssertJ")
+    setExportDatatables(true)
 }
+
 tasks.withType(Test).configureEach {
     useJUnitPlatform()
 }
