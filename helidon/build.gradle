@@ -28,8 +28,8 @@ application {
 
 rewrite {
     activeRecipe('org.openrewrite.java.testing.assertj.JUnitToAssertj')
-    activeRecipe('org.openrewrite.java.testing.assertj.Assertj')
     activeRecipe('org.openrewrite.java.testing.hamcrest.MigrateHamcrestToAssertJ')
+    activeRecipe('org.openrewrite.java.testing.assertj.Assertj')
     setExportDatatables(true)
 }
 
