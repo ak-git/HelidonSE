@@ -54,7 +54,7 @@ curl -w "\n" -X PUT -d 'Howdy' http://localhost:8080/greet/greeting
 ### Update version
 
 ```shell
-gradle release
+./gradlew release
 ```
 
 ### Add git tag
@@ -77,6 +77,16 @@ git tag 2026.04
 
 ```shell
 ./gradlew buildHealth
+```
+
+## Rewrite
+
+### [Migrate JUnit asserts to AssertJ](https://docs.openrewrite.org/recipes/java/testing/assertj/junittoassertj)
+
+Get token https://artifacts.codegenomeproject.org/maven/
+
+```shell
+./gradlew rewriteRun
 ```
 
 ## Run docker image
