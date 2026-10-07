@@ -5,6 +5,24 @@
       <profile default="true" name="Default" enabled="true">
         <outputRelativeToContentRoot value="true" />
       </profile>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.helidon.codegen/helidon-codegen-apt/27.0.0/f1ede58431ebde3da4b60e0bf446ced6670329d4/helidon-codegen-apt-27.0.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.helidon.service/helidon-service-codegen/27.0.0/6908a34eeca985dc850d5a61136e89d81bf67347/helidon-service-codegen-27.0.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.helidon.builder/helidon-builder-codegen/27.0.0/8ccac031c7ab549d634630f4095eb4e0dd0bb9/helidon-builder-codegen-27.0.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.helidon.codegen/helidon-codegen/27.0.0/b05fd2329f3fc101d4f48f09f7032a9cd69bf2ab/helidon-codegen-27.0.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.helidon.codegen/helidon-codegen-class-model/27.0.0/e52a7dc61e35cbeea385ad802f9cc3162c760d5c/helidon-codegen-class-model-27.0.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.helidon.service/helidon-service-metadata/27.0.0/ccd783e706caf0eeb1ed1e4fe01ee9f45514338f/helidon-service-metadata-27.0.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.helidon.common/helidon-common-types/27.0.0/4fbc5810915bc60316b9c8cedda527e5fe74a4fa/helidon-common-types-27.0.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.helidon.builder/helidon-builder-api/27.0.0/41bead099c76f28448c828de34553cb6657253f1/helidon-builder-api-27.0.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.helidon.metadata/helidon-metadata-hson/27.0.0/bad408d0f3217547b13e6a5d2a335ce77d259bbc/helidon-metadata-hson-27.0.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.helidon.common/helidon-common/27.0.0/71ebda6c514ff52f23a30e2e70dc52eaf7062b72/helidon-common-27.0.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.helidon.common/helidon-common-buffers/27.0.0/9d0b5289cec40d1fb932189e45667eda626f933d/helidon-common-buffers-27.0.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.helidon.metadata/helidon-metadata/27.0.0/9d03af692936c37280cb92262980652dd30b8b30/helidon-metadata-27.0.0.jar" />
+        </processorPath>
+        <module name="HelidonSE.helidon.main" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="27" />
   </component>
